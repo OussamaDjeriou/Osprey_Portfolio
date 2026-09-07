@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Osprey — Web Development & Digital Design Studio</title>
+  <meta name="description" content="Osprey is a modern web development & digital design studio crafting high-performance, minimalist, and responsive web experiences." />
+  <meta name="keywords" content="Osprey, Web Development, Portfolio, Front-end, UI/UX, Styleco, Algerian Developer, Responsive Design" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Assets/Logo.png" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@500;600;700&family=Cairo:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Background Ambient Glows -->
+  <div class="ambient-glow glow-top" aria-hidden="true"></div>
+  <div class="ambient-glow glow-center" aria-hidden="true"></div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="header" id="navbar">
+    <div class="container header-container">
+      <!-- Logo (Left) -->
+      <a href="#home" class="logo-group" aria-label="Osprey Home">
+        <div class="logo-wrapper">
+          <img src="Assets/Logo.png" alt="Osprey Logo" class="logo-img" />
+        </div>
+        <div class="logo-text">
+          <span class="brand-name">Osprey<span class="brand-dot">.</span></span>
+          <span class="brand-sub">STUDIO</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links (Right) -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#home" class="nav-link active" data-section="home">
+              <span>Home</span>
+              <span class="active-indicator"></span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link" data-section="projects">
+              <span>Projects</span>
+              <span class="active-indicator"></span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link" data-section="contact">
+              <span>Contact</span>
+              <span class="active-indicator"></span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Mobile Menu CTA inside drawer -->
+        <div class="nav-mobile-cta">
+          <a href="https://wa.me/213793941017" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            WhatsApp Direct
+          </a>
+        </div>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="header-actions">
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- HERO SECTION (Inspired directly by Styleco Design) -->
+    <section class="hero-section" id="home">
+      <!-- Centerpiece Hero Showcase -->
+      <div class="container hero-container">
+        <div class="hero-centerpiece">
+          <h1 class="hero-brand-title">
+            <span class="outline-word">Osprey</span><span class="outline-dot">.</span>
+          </h1>
+        </div>
+
+        <!-- Bottom Row: Metrics on Left, Manifesto on Right (Styleco Style) -->
+        <div class="hero-bottom-grid">
+          <!-- Left Column: Big Bold Metrics -->
+          <div class="hero-stat-box">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">
+              <span class="stat-dot"></span>
+              <span>BESPOKE WEB DEVELOPMENT</span>
+            </div>
+            <p class="stat-subtext">Designed with precision, crafted for performance.</p>
+          </div>
+
+          <!-- Center Scroll Indicator -->
+          <div class="hero-scroll-cue">
+            <a href="#projects" class="scroll-link" aria-label="Scroll to projects">
+              <span class="mouse-icon">
+                <span class="wheel"></span>
+              </span>
+              <span class="scroll-text">EXPLORE WORK</span>
+            </a>
+          </div>
+
+          <!-- Right Column: Editorial Manifesto -->
+          <div class="hero-manifesto-box">
+            <p class="manifesto-text">
+              <strong>Osprey</strong> is a high-end web design &amp; development studio crafting minimalist, ultra-responsive digital products that balance aesthetic purity with commercial impact.
+            </p>
+            <div class="manifesto-actions">
+              <a href="#projects" class="btn btn-primary">
+                <span>View Portfolio</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+              </a>
+              <a href="#contact" class="btn btn-ghost">
+                <span>Get in Touch</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- PROJECTS SHOWCASE SECTION -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <div class="section-tag-wrap">
+            <span class="section-tag">SELECTED WORKS</span>
+            <span class="tag-divider">/</span>
+            <span class="tag-sub">المشاريع المنجزة</span>
+          </div>
+          <h2 class="section-title">Crafted with Precision &amp; Modern Elegance.</h2>
+          <p class="section-subtitle">
+            Explore a curated selection of commercial web experiences built from ground up with clean structure, fluid aesthetics, and flawless responsiveness.
+          </p>
+        </div>
+
+        <!-- Project Filter Buttons -->
+        <div class="project-filters" role="tablist" aria-label="Project Categories">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">
+            All Projects <span class="filter-count">4</span>
+          </button>
+          <button class="filter-btn" data-filter="fashion" role="tab" aria-selected="false">
+            Fashion &amp; Luxury
+          </button>
+          <button class="filter-btn" data-filter="health" role="tab" aria-selected="false">
+            Healthcare
+          </button>
+          <button class="filter-btn" data-filter="fitness" role="tab" aria-selected="false">
+            Fitness
+          </button>
+          <button class="filter-btn" data-filter="pos" role="tab" aria-selected="false">
+            SaaS &amp; POS
+          </button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-grid">
+
+          <!-- PROJECT 1: Styleco. -->
+          <article class="project-card" data-category="fashion" data-id="styleco">
+            <div class="project-media-wrapper">
+              <img src="Assets/Stylco_Webpng.png" alt="Styleco Minimalist Fashion Website" class="project-img" loading="lazy" />
+              <div class="project-overlay">
+                <button class="btn btn-preview open-modal-btn" data-project="styleco">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                  <span>Preview Project</span>
+                </button>
+              </div>
+              <div class="project-category-badge">Fashion &amp; E-Commerce</div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta-top">
+                <span class="project-number">01</span>
+                <span class="project-year">2025</span>
+              </div>
+              <h3 class="project-title">Styleco.</h3>
+              <p class="project-desc">
+                A minimalist luxury fashion showcase emphasizing visual clarity, serene lighting gradient transitions, and editorial typography. Designed to deliver an unforgettable brand impression.
+              </p>
+              <div class="project-tags">
+                <span class="tag">HTML5 / CSS3</span>
+                <span class="tag">Minimalist UI</span>
+                <span class="tag">Editorial Layout</span>
+                <span class="tag">Responsive</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn-text-link open-modal-btn" data-project="styleco">
+                  <span>View Details</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: PRODENT Clinic -->
+          <article class="project-card" data-category="health" data-id="prodent">
+            <div class="project-media-wrapper">
+              <img src="Assets/Clinic_Web.png" alt="PRODENT Dental Clinic Platform" class="project-img" loading="lazy" />
+              <div class="project-overlay">
+                <button class="btn btn-preview open-modal-btn" data-project="prodent">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                  <span>Preview Project</span>
+                </button>
+              </div>
+              <div class="project-category-badge">Healthcare &amp; Clinic</div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta-top">
+                <span class="project-number">02</span>
+                <span class="project-year">2025</span>
+              </div>
+              <h3 class="project-title">PRODENT Clinic</h3>
+              <p class="project-desc">
+                An intuitive medical clinic web platform featuring service exploration, dental implant modules, doctor credentials, and streamlined patient consultation booking.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Healthcare UI</span>
+                <span class="tag">Consultation Booking</span>
+                <span class="tag">Modern Web</span>
+                <span class="tag">Performance</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn-text-link open-modal-btn" data-project="prodent">
+                  <span>View Details</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: Rep Zone Gym -->
+          <article class="project-card" data-category="fitness" data-id="repzone">
+            <div class="project-media-wrapper">
+              <img src="Assets/Gym_web.png" alt="Rep Zone Fitness Web Platform" class="project-img" loading="lazy" />
+              <div class="project-overlay">
+                <button class="btn btn-preview open-modal-btn" data-project="repzone">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                  <span>Preview Project</span>
+                </button>
+              </div>
+              <div class="project-category-badge">Fitness &amp; Athletics</div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta-top">
+                <span class="project-number">03</span>
+                <span class="project-year">2025</span>
+              </div>
+              <h3 class="project-title">Rep Zone</h3>
+              <p class="project-desc">
+                High-energy athletic dark-mode website built for a premier training facility. Includes working hour schedules, multi-lingual navigation (Arabic, English, French), and gym location guidance.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Dark Mode</span>
+                <span class="tag">Fitness Brand</span>
+                <span class="tag">Multi-Language</span>
+                <span class="tag">High Energy</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn-text-link open-modal-btn" data-project="repzone">
+                  <span>View Details</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 4: RestoFlow Restaurant Management -->
+          <article class="project-card" data-category="pos" data-id="restoflow">
+            <div class="project-media-wrapper">
+              <img src="Assets/Restaurent_Web.png" alt="RestoFlow Restaurant POS & ERP Web System" class="project-img" loading="lazy" />
+              <div class="project-overlay">
+                <button class="btn btn-preview open-modal-btn" data-project="restoflow">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                  <span>Preview Project</span>
+                </button>
+              </div>
+              <div class="project-category-badge">Restaurant SaaS &amp; ERP</div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta-top">
+                <span class="project-number">04</span>
+                <span class="project-year">2025</span>
+              </div>
+              <h3 class="project-title">RestoFlow</h3>
+              <p class="project-desc">
+                Smart restaurant management dashboard and portal. Built to manage kitchen workflows, point-of-sale orders, and staff operations with an eye-catching illustration and secured authentication.
+              </p>
+              <div class="project-tags">
+                <span class="tag">SaaS Platform</span>
+                <span class="tag">Restaurant ERP</span>
+                <span class="tag">Auth Portal</span>
+                <span class="tag">Interactive</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn-text-link open-modal-btn" data-project="restoflow">
+                  <span>View Details</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- CONTACT SECTION (User's Exact Details) -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag-wrap justify-center">
+            <span class="section-tag">GET IN TOUCH</span>
+            <span class="tag-divider">/</span>
+            <span class="tag-sub">تواصل معنا</span>
+          </div>
+          <h2 class="section-title">Ready to launch your next standout project?</h2>
+          <p class="section-subtitle">
+            Reach out directly through WhatsApp, phone, or social channels. Let's discuss your project and turn your vision into an exceptional web platform.
+          </p>
+        </div>
+
+        <!-- Contact Methods Cards -->
+        <div class="contact-cards-grid">
+
+          <!-- WhatsApp & Phone Card -->
+          <div class="contact-card primary-contact-card">
+            <div class="contact-card-icon whatsapp-icon-bg">
+              <!-- WhatsApp SVG -->
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.15c-1.49 0-2.95-.4-4.23-1.16l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.24-8.19 8.24zm4.52-6.17c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.44.06-.66.31-.22.25-.86.84-.86 2.05s.88 2.38 1 2.54c.12.17 1.73 2.64 4.19 3.7.59.25 1.05.4 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.17-.48-.29z"/>
+              </svg>
+            </div>
+            <div class="contact-card-content">
+              <span class="card-label">WhatsApp &amp; Phone</span>
+              <h3 class="card-value">0793941017</h3>
+              <p class="card-desc">Direct line available for inquiries, quotes, and project discussions.</p>
+              
+              <div class="contact-btn-group">
+                <a href="https://wa.me/213793941017?text=Hello%20Osprey%20Web,%20I'd%20like%20to%20discuss%20a%20new%20website%20project!" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                  <span>Chat on WhatsApp</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="tel:0793941017" class="btn btn-phone">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span>Call Now</span>
+                </a>
+                <button class="btn btn-copy" id="copy-phone-btn" data-phone="0793941017" title="Copy phone number">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span id="copy-phone-text">Copy</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Instagram Card -->
+          <div class="contact-card social-card">
+            <div class="contact-card-icon instagram-icon-bg">
+              <!-- Instagram SVG -->
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </div>
+            <div class="contact-card-content">
+              <span class="card-label">Instagram</span>
+              <h3 class="card-value">@Osprey_Sweb</h3>
+              <p class="card-desc">Follow our latest design drops, behind-the-scenes workflows, and tech reels.</p>
+              <a href="https://www.instagram.com/Osprey_Sweb" target="_blank" rel="noopener noreferrer" class="btn btn-social-link">
+                <span>View Instagram</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Facebook Card -->
+          <div class="contact-card social-card">
+            <div class="contact-card-icon facebook-icon-bg">
+              <!-- Facebook SVG -->
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </div>
+            <div class="contact-card-content">
+              <span class="card-label">Facebook</span>
+              <h3 class="card-value">Osprey sweb</h3>
+              <p class="card-desc">Connect with our official Facebook page for announcements and client updates.</p>
+              <a href="https://www.facebook.com/search/top?q=Osprey%20sweb" target="_blank" rel="noopener noreferrer" class="btn btn-social-link">
+                <span>View Facebook</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand-col">
+        <a href="#home" class="logo-group">
+          <img src="Assets/Logo.png" alt="Osprey" class="logo-img-sm" />
+          <span class="brand-name">Osprey<span class="brand-dot">.</span></span>
+        </a>
+        <p class="footer-tagline">
+          Crafting minimalist, high-impact digital experiences for forward-thinking brands.
+        </p>
+      </div>
+
+      <div class="footer-nav-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact-col">
+        <h4>Get in Touch</h4>
+        <p><strong>Phone &amp; WA:</strong> 0793941017</p>
+        <p><strong>Facebook:</strong> Osprey sweb</p>
+        <p><strong>Instagram:</strong> @Osprey_Sweb</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-container">
+        <p class="copyright">&copy; 2025 Osprey Web Studio. All rights reserved.</p>
+        <a href="#home" class="back-to-top" aria-label="Back to top">
+          <span>Back to Top</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PROJECT LIGHTBOX MODAL -->
+  <div class="modal-backdrop" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Project Modal">&times;</button>
+      <div class="modal-body">
+        <div class="modal-media">
+          <img id="modal-img" src="" alt="Project Preview" />
+        </div>
+        <div class="modal-info">
+          <span class="modal-badge" id="modal-category">Category</span>
+          <h2 class="modal-title" id="modal-title">Project Title</h2>
+          <p class="modal-description" id="modal-desc">Project Description</p>
+          <div class="modal-meta-grid">
+            <div class="modal-meta-item">
+              <span class="meta-label">Client / Focus</span>
+              <span class="meta-value" id="modal-client">Brand Experience</span>
+            </div>
+            <div class="modal-meta-item">
+              <span class="meta-label">Year</span>
+              <span class="meta-value">2025</span>
+            </div>
+            <div class="modal-meta-item">
+              <span class="meta-label">Tech Stack</span>
+              <span class="meta-value" id="modal-tech">HTML5, CSS3, JavaScript</span>
+            </div>
+          </div>
+          <div class="modal-actions">
+            <a href="https://wa.me/213793941017?text=Hello%20Osprey%20Web,%20I'm%20interested%20in%20a%20project%20like%20this!" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+              <span>Request Similar Project</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification for Copy -->
+  <div class="toast-notification" id="toast-notify" role="status" aria-live="polite">
+    <span class="toast-icon">✓</span>
+    <span class="toast-msg">Phone number copied to clipboard!</span>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
