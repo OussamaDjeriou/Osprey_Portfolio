@@ -1185,6 +1185,13 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  align-items: center;
+}
+
+/* Call Now & Copy: compact icon+text style */
+.btn-phone,
+.btn-copy {
+  flex-shrink: 0;
 }
 
 .btn-social-link {
@@ -1578,13 +1585,23 @@ button {
   }
 
   .contact-btn-group {
-    flex-direction: column;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
   }
 
-  .contact-btn-group .btn {
-    width: 100%;
+  /* WhatsApp spans full width */
+  .contact-btn-group .btn-whatsapp {
+    grid-column: 1 / -1;
     justify-content: center;
+  }
+
+  /* Call Now & Copy: side by side, compact */
+  .contact-btn-group .btn-phone,
+  .contact-btn-group .btn-copy {
+    justify-content: center;
+    padding: 10px 14px;
+    font-size: 0.85rem;
   }
 }
 
