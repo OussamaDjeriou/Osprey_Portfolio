@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     styleco: {
       title: 'Styleco. Fashion & Luxury',
       category: 'Fashion & E-Commerce',
-      image: 'Assets/Stylco_Webpng.png',
+      image: 'Assets/Stylco_Webpng.jpg',
       description: 'A minimalist luxury fashion showcase emphasizing visual clarity, serene lighting gradient transitions, and editorial typography. Designed to deliver an unforgettable brand impression with an ultra-clean digital catalog.',
       client: 'Styleco Apparel & Studio',
       tech: 'HTML5, Modern CSS3, JavaScript, UI/UX Craft'
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     prodent: {
       title: 'PRODENT Dental Clinic',
       category: 'Healthcare & Dental Platform',
-      image: 'Assets/Clinic_Web.png',
+      image: 'Assets/Clinic_Web.jpg',
       description: 'An intuitive medical clinic web platform featuring service exploration, dental implant modules, doctor credentials, and streamlined patient consultation booking for modern healthcare practices.',
       client: 'PRODENT Medical Care',
       tech: 'HTML5, CSS3, Responsive Grid, Consultation Engine'
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     repzone: {
       title: 'Rep Zone Athletic Club',
       category: 'Fitness & Athletic Platform',
-      image: 'Assets/Gym_web.png',
+      image: 'Assets/Gym_web.jpg',
       description: 'High-energy athletic dark-mode website built for a premier training facility. Includes working hour schedules, multi-lingual navigation (Arabic, English, French), and gym location guidance.',
       client: 'Rep Zone Fitness Center',
       tech: 'Dark Mode UI, Multi-Language, Performance Optimization'
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     restoflow: {
       title: 'RestoFlow Restaurant ERP & POS',
       category: 'Restaurant SaaS & ERP',
-      image: 'Assets/Restaurent_Web.png',
+      image: 'Assets/Restaurent_Web.jpg',
       description: 'Smart restaurant management dashboard and portal. Built to manage kitchen workflows, point-of-sale orders, and staff operations with an eye-catching illustration and secured authentication.',
       client: 'RestoFlow FoodTech Systems',
       tech: 'SaaS Platform, ERP Workflow, Authentication, Responsive'
@@ -81,23 +81,34 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Mobile Navigation Drawer Toggle ---
   const menuToggle = document.getElementById('menu-toggle');
   const navMenu = document.getElementById('nav-menu');
+  const navOverlay = document.getElementById('nav-overlay');
+
+  const closeNav = () => {
+    navMenu.classList.remove('open');
+    menuToggle.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    if (navOverlay) navOverlay.classList.remove('active');
+  };
 
   if (menuToggle && navMenu) {
     menuToggle.addEventListener('click', () => {
       const isOpen = navMenu.classList.toggle('open');
       menuToggle.classList.toggle('open');
       menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      if (navOverlay) navOverlay.classList.toggle('active', isOpen);
     });
 
     // Close menu when clicking links
     navLinks.forEach((link) => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('open');
-        menuToggle.classList.remove('open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-      });
+      link.addEventListener('click', closeNav);
     });
   }
+
+  // Close nav when clicking overlay
+  if (navOverlay) {
+    navOverlay.addEventListener('click', closeNav);
+  }
+
 
   // --- Projects Category Filter ---
   const filterBtns = document.querySelectorAll('.filter-btn');
