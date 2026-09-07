@@ -241,5 +241,6 @@ document.addEventListener('DOMContentLoaded', () => {
           if (copyPhoneText) copyPhoneText.textContent = 'Copy';
         }, 2500);
       }
-  }
-});
+    }); // closes copyPhoneBtn addEventListener
+  }     // closes if (copyPhoneBtn)
+});     // closes DOMContentLoaded
